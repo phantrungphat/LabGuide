@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Lab02 - Task 2.1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.1.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body>
+    <script src="bootstrap-3.1.1-dist/js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$(".Ask1").addClass('active'); 
+			$("#pageDefault").tab('show'); 
+        });
+
+        $(document).ready(function(){
+        	var i, j, object, count, pageNumber;
+        	object = document.getElementsByClassName("mytabs");
+        	$("#tabsright li").click(function(){
+        		
+        		$("#bg-content-left ul li .nm").removeClass('nm');
+        		$("#bg-content-left ul li .active").removeClass('active');
+        		$("#tabsright li .active").removeClass('active');
+        		$("#bg-content-left ul li a").addClass('nm');
+        		pageNumber = $(this).index();
+
+        		if (pageNumber == 0)
+        			$(".Ask1").addClass('active');
+        		if (pageNumber == 1)
+        			$(".Ask2").addClass('active');
+        		if (pageNumber == 2)
+        			$(".Ask3").addClass('active');
+        		if (pageNumber == 3)
+        			$(".Ask4").addClass('active');	
+
+        		$("#tabsright li a").tab('show');
+        	});
+        });
+
+        $(document).ready(function(){
+        	var i, j, object, count, pageNumber;
+        	object = document.getElementsByClassName("mytabs");
+        	$("#bg-content-left li").click(function(){
+
+        		$("#bg-content-left ul li .active").removeClass('active');
+        		$("#tabsright li .active").removeClass('active');
+
+        		pageNumber = $(this).index();
+
+        		if (pageNumber == 0)
+        			$(".Ask1").addClass('active');
+        		if (pageNumber == 1)
+        			$(".Ask2").addClass('active');
+        		if (pageNumber == 2)
+        			$(".Ask3").addClass('active');
+        		if (pageNumber == 3)
+        			$(".Ask4").addClass('active');	
+
+        		$("#bg-content-left ul li a").tab('show');
+        	});
+        });
+
+	</script>
+
+	<!-- Phần header --> 
+    <div id="header">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-12">
+    				<nav class="navbar navbar-default navbar-static-top" id="menu" role="navigation">
+    					<div class="container-fluid">
+    						<!-- Brand and toggle get grouped for better mobile display -->
+    						<div class="navbar-header">
+    							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+    								<span class="sr-only">Toggle navigation</span>
+    								<span class="icon-bar"></span>
+    								<span class="icon-bar"></span>
+    								<span class="icon-bar"></span>
+    							</button>
+    							<a class="navbar-brand" href="#" style="color: white">16520916 - Phan Trung Phát	</a>
+    						</div>
+    				
+    						<!-- Collect the nav links, forms, and other content for toggling -->
+    						<div class="collapse navbar-collapse navbar-ex1-collapse">  						
+    							<ul class="nav navbar-nav navbar-right" id="tabsright">
+    								<li><a class="mytabs Ask1" href="#cau1" data-toggle="tab" id="pageDefault" style="background-color: #48525D; color: #777">Câu 1</a></li>
+    								<li><a class="mytabs Ask2" href="#cau2" data-toggle="tab" style="background-color: #48525D; color: #777">Câu 2</a></li>
+    								<li><a class="mytabs Ask3" href="#cau3" data-toggle="tab" style="background-color: #48525D; color: #777">Câu 3</a></li>
+    								<li><a class="mytabs Ask4" href="#cau4" data-toggle="tab" style="background-color: #48525D; color: #777">Câu 4</a></li>
+    							</ul>
+    							<form class="navbar-form navbar-right" role="search">
+    								<div class="form-group">
+    									<input type="text" class="form-control" placeholder="Search">
+    								</div>
+    							</form>
+    						</div><!-- /.navbar-collapse -->
+    					</div>
+    				</nav>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+	<!-- /header -->
+
+	<!-- main -->
+	<div id="main">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<div id="bg-content-left">
+						<ul class="nav nav-stacked">
+                        	<li><a class="mytabs Ask1" href="#cau1" data-toggle="tab">Câu 1</a></li>
+                        	<li><a class="mytabs Ask2" href="#cau2" data-toggle="tab">Câu 2</a></li>
+                        	<li><a class="mytabs Ask3" href="#cau3" data-toggle="tab">Câu 3</a></li>
+                        	<li><a class="mytabs Ask4" href="#cau4" data-toggle="tab">Câu 4</a></li>
+                    	</ul>
+					</div>
+				</div>
+				<div class="col-md-10">
+					<div class="tab-content">
+                        <div class="tab-pane" id="cau1">
+                        <div class="panel panel-default">
+                        	<div class="panel-heading">
+                        		<h2 class="panel-title">Câu 1</h2>
+                        	</div>
+                        	<div class="panel-body">
+                        		<p>Để tích hợp Bootstrap vào một trang HTML/CSS thông thường trong điều kiện đang có kết nối Internet ta chỉ cần nhúng trực tiếp Bootstrap vào giống như nhúng file CSS thông thường: </p>
+                        		<pre style="color: blue">
+    	&lt;!-- Latest compiled and minified CSS --&gt;
+	&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"&gt;
+
+	&lt;!-- Optional theme --&gt;
+	&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"&gt;
+
+	&lt;!-- Latest compiled and minified JavaScript --&gt;
+	&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"&gt;&lt;/script&gt;
+								</pre>
+								<p>Bootstrap đã được biên địch bao gồm các thành phần được mô tả như sau: </p>
+								<pre>
+						bootstrap/
+						├── css/
+						│   ├── bootstrap.css
+						│   ├── bootstrap.min.css
+						│   ├── bootstrap-theme.css
+						│   └── bootstrap-theme.min.css
+						├── js/
+						│   ├── bootstrap.js
+						│   └── bootstrap.min.js
+						└── fonts/
+						    ├── glyphicons-halflings-regular.eot
+						    ├── glyphicons-halflings-regular.svg
+						    ├── glyphicons-halflings-regular.ttf
+						    └── glyphicons-halflings-regular.woff
+								</pre>
+                        	</div>
+                        </div>
+                    	</div>
+                        <div class="tab-pane" id="cau2">
+                        	<div class="panel panel-default">
+                        		<div class="panel-heading">
+                        			<h2 class="panel-title">Câu 2</h2>
+                        		</div>
+                        		<div class="panel-body">
+                        			<p>
+                        				Web Responsive là phong cách thiết kế website làm sao cho phù hợp trên tất cả các thiết bị, mọi độ phân giải màn hình. Một website đẹp trên máy tính nhưng khi xem trên điện thoại bố cục lộn xộn, hình ảnh, bài viết không cân đối thì không thể gọi là Web Responsive.
+									</p>
+									<p>
+										Ví dụ về Web Responsive: Bạn mở trang chủ website Responsive, rồi thu nhỏ trình duyệt hoặc đổi độ phân giải màn hình, bạn sẽ thấy website của mình không hề xuất hiện Scrollbar ngang, mà nó sẽ tự động co dãn sao cho phù hợp với chiều rộng màn hình máy tính bạn.
+Hoặc đơn giản và hay bắt gặp nhất là khi bạn sử dụng các thiết bị cảm ứng để lướt web thì với chế độ xoay thiết bị thì hình ảnh , trang web của bạn sẽ chuyển đổi một cách uyển chuyển sang chế độ hiện thị khác. Nó không chỉ đẹp mắt  và phù hợp hơn với màn hình mới mà nó còn tạo hiệu ứng tốt cho người dùng, tất nhiên đó là điều bạn rất cần cho 1 web site của mình đúng không ?
+									</p>
+									<p>Để tắt Reponsive trên Bootstrap: </p>
+									<pre style="color: blue">
+		&lt;!-- Như chúng ta đã biết thì dòng này sẽ Enable Reponsive design nên ta bỏ đi  --&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+									</pre>
+									<p>
+										Hãy ghi đè thuộc tính <code>width</code> trên <code>.container</code> đối với mỗi cột trong hệ thống lưới, ví dụ <code>width: 970px !important;</code> Hãy chắc chắn rằng, các mã CSS tùy biến này được tích hợp vào sau CSS mặc định của Bootstrap. Bạn cũng có thể tránh sử dụng <code>!important</code> bằng các media query hoặc một số selector-fu.
+										<br><br>
+						              	Nếu bạn sử dụng thanh điều hướng, hãy vô hiệu hóa toàn bộ các tính năng thu gọn và mở rộng trên thanh điều hướng đó.
+						              	<br><br>
+						              	Đối với các bố cục dạng lưới, hãy sử dụng class <code>.col-xs-*</code> bằng cách thêm vào hoặc thay thế cho các class medium/large. Đừng lo lắng, hệ thống lưới trên các thiết bị có màn hình siêu nhỏ sẽ tự động co giãn đối với mọi độ phân giải. 
+						              	<br><br>
+						              	Bạn sẽ cần phải có Respond.js để chạy được trên trình duyệt IE8.
+									</p>
+                        		</div>
+                        	</div>
+                        </div>
+                        <div class="tab-pane" id="cau3">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h2 class="panel-title">Câu 3</h2>
+								</div>
+								<div class="panel-body">
+									<p><strong>Grid System</strong> là một hệ thống lưới và là một thuật ngữ được dùng trong thiết kế và nó được cấu hình thành 12 cột. Kích thước trong Grid System tính bằng cột, mỗi cột này sẽ chiếm một % nhất định kích thước của layout. Mà bao nhiêu % cho mỗi cột thì Bootstrap đã tính sẵn cho chúng ta.</p>
+									<table style="border-collapse: collapse; border-spacing: 0px; margin: 0px 0px 1.5em; padding: 0px; border: 1px solid rgb(221, 221, 221);  vertical-align: middle; width: 100%; color: rgb(34, 34, 34); line-height: 22.399999618530273px;">
+	<tbody style="margin: 0px; padding: 0px; border: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+		<tr style="margin: 0px; padding: 0px; border: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			<th style="border: 1px solid rgb(77, 144, 254); padding: 6px 10px; vertical-align: middle; margin: 0px; font-style: inherit; font-family: inherit; color: rgb(255, 255, 255); float: none !important; background-color: rgb(97, 153, 223);">Ký Hiệu Class</th>
+			<th style="border: 1px solid rgb(77, 144, 254); padding: 6px 10px; vertical-align: middle; margin: 0px; font-style: inherit; font-family: inherit; color: rgb(255, 255, 255); float: none !important; background-color: rgb(97, 153, 223);">Thiết Bị Hỗ Trợ</th>
+			<th style="border: 1px solid rgb(77, 144, 254); padding: 6px 10px; vertical-align: middle; margin: 0px; font-style: inherit; font-family: inherit; color: rgb(255, 255, 255); float: none !important; background-color: rgb(97, 153, 223);">Độ Rộng Lớp Container</th>
+			<th style="border: 1px solid rgb(77, 144, 254); padding: 6px 10px; vertical-align: middle; margin: 0px; font-style: inherit; font-family: inherit; color: rgb(255, 255, 255); float: none !important; background-color: rgb(97, 153, 223);">Chú Thích</th>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; border: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="font-family: monospace; line-height: 20.7999992370605px;">.col-xs-$</span></td>
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="line-height: 20.7999992370605px;">Extra small</span></td>
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="line-height: 20.7999992370605px;">&lt; 768px</span></td>
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="line-height: 20.7999992370605px;">Dùng cho điện thoại kích thước nhỏ hơn 768px</span></td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; border: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="font-family: monospace; line-height: 20.7999992370605px;">.col-sm-$</span></td>
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="line-height: 20.7999992370605px;">Small devices</span></td>
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="line-height: 20.7999992370605px;">≥ 768px</span></td>
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="line-height: 20.7999992370605px;">Dùng cho tablets kích thước &gt;= 768px</span></td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; border: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="font-family: monospace; line-height: 20.7999992370605px;">.col-md-$</span></td>
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="line-height: 20.7999992370605px;">Medium devices</span></td>
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="line-height: 20.7999992370605px;">≥ 992p</span></td>
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="line-height: 20.7999992370605px;">Dùng cho desktop ( &gt;=992px)</span></td>
+		</tr>
+		<tr style="margin: 0px; padding: 0px; border: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline;">
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="font-family: monospace; line-height: 20.7999992370605px;">.col-lg-$</span></td>
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="line-height: 20.7999992370605px;">Large devices</span></td>
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="line-height: 20.7999992370605px;">≥ 1200px</span></td>
+			<td style="border: 1px solid rgb(221, 221, 221); padding: 6px 10px; vertical-align: top; margin: 0px; font-style: inherit; font-family: inherit; float: none !important;"><span style="line-height: 20.7999992370605px;">Dùng cho desktops &gt;=1200px</span></td>
+		</tr>
+	</tbody>
+</table>
+									<p>
+										Ký tự $ trong bảng trên đại diện cho số cột chứa phần tử đó, là một số từ 1 đến 12.
+										<br><br>
+										Khi các bạn vào trang chủ của bootstrap thì sẽ thấy ngay mọi thành phần html đều nằm trong class  <code>.row</code> và nó được bao bọc bên trong bởi class <code>.container</code> lưu ý rằng đây là 2 class bắt buộc phải có nếu như bạn làm việc với bootstrap.
+										<br><br>
+										Sự khác nhau của chúng có thể nằm ở Reposive, ví dụ: nếu bạn chia layout của bạn bởi class <code>col-xs</code> tức là nhỏ nhất thì nó không thể co giãn được nữa.
+										<br><br>
+										Tương tự đối với các class khác thì vùng hỗ trợ của nó được định nghĩa theo bản ở trên, đối với từng thiết bị.
+										<table class="table table-bordered table-striped" style="width: 100%;"><thead style="-webkit-font-smoothing: antialiased; box-sizing: border-box;">
+<tr style="-webkit-font-smoothing: antialiased; box-sizing: border-box;"><th></th><th style="-webkit-font-smoothing: antialiased; border-bottom-color: rgb(221, 221, 221); border-bottom-style: solid; border-left-color: rgb(221, 221, 221); border-left-style: solid; border-right-color: rgb(221, 221, 221); border-right-style: solid; border-width: 0px 1px 2px; box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: bottom;"><br class="Apple-interchange-newline" />
+Màn hình nhỏ nhất<br />
+<small style="-webkit-font-smoothing: antialiased; box-sizing: border-box; font-size: 12.75px;">Phones (&lt;768px)</small></th><th style="-webkit-font-smoothing: antialiased; border-bottom-color: rgb(221, 221, 221); border-bottom-style: solid; border-left-color: rgb(221, 221, 221); border-left-style: solid; border-right-color: rgb(221, 221, 221); border-right-style: solid; border-width: 0px 1px 2px; box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: bottom;">Màn hình nhỏ<br />
+<small style="-webkit-font-smoothing: antialiased; box-sizing: border-box; font-size: 12.75px;">Tablets (&#8805;768px)</small></th><th style="-webkit-font-smoothing: antialiased; border-bottom-color: rgb(221, 221, 221); border-bottom-style: solid; border-left-color: rgb(221, 221, 221); border-left-style: solid; border-right-color: rgb(221, 221, 221); border-right-style: solid; border-width: 0px 1px 2px; box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: bottom;">Màn hình vừa<br />
+<small style="-webkit-font-smoothing: antialiased; box-sizing: border-box; font-size: 12.75px;">Desktops (&#8805;992px)</small></th><th style="-webkit-font-smoothing: antialiased; border-bottom-color: rgb(221, 221, 221); border-bottom-style: solid; border-left-color: rgb(221, 221, 221); border-left-style: solid; border-right-color: rgb(221, 221, 221); border-right-style: solid; border-width: 0px 1px 2px; box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: bottom;">Màn hình lớp<br />
+<small style="-webkit-font-smoothing: antialiased; box-sizing: border-box; font-size: 12.75px;">Desktops (&#8805;1200px)</small></th></tr>
+</thead><tbody style="-webkit-font-smoothing: antialiased; box-sizing: border-box;">
+<tr style="-webkit-font-smoothing: antialiased; background-color: #f9f9f9; box-sizing: border-box;"><th class="text-nowrap" scope="row" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top; white-space: nowrap;">Trạng thái</th><td style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top;">Mọi thời điểm</td><td colspan="3" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top;">Tự động hiển thị theo màn hình</td></tr>
+<tr style="-webkit-font-smoothing: antialiased; box-sizing: border-box;"><th class="text-nowrap" scope="row" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top; white-space: nowrap;">Độ rộng</th><td style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top;">Không (tự động)</td><td style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top;">750px</td><td style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top;">970px</td><td style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top;">1170px</td></tr>
+<tr style="-webkit-font-smoothing: antialiased; background-color: #f9f9f9; box-sizing: border-box;"><th class="text-nowrap" scope="row" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top; white-space: nowrap;">Tên lớp</th><td style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top;"><code style="-webkit-font-smoothing: antialiased; background-color: #f9f2f4; border-radius: 4px; box-sizing: border-box; color: #c7254e; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13.5px; padding: 2px 4px;">.col-xs-*</code></td><td style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top;"><code style="-webkit-font-smoothing: antialiased; background-color: #f9f2f4; border-radius: 4px; box-sizing: border-box; color: #c7254e; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13.5px; padding: 2px 4px;">.col-sm-*</code></td><td style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top;"><code style="-webkit-font-smoothing: antialiased; background-color: #f9f2f4; border-radius: 4px; box-sizing: border-box; color: #c7254e; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13.5px; padding: 2px 4px;">.col-md-*</code></td><td style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top;"><code style="-webkit-font-smoothing: antialiased; background-color: #f9f2f4; border-radius: 4px; box-sizing: border-box; color: #c7254e; font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; font-size: 13.5px; padding: 2px 4px;">.col-lg-*</code></td></tr>
+<tr style="-webkit-font-smoothing: antialiased; box-sizing: border-box;"><th class="text-nowrap" scope="row" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top; white-space: nowrap;">Số cột</th><td colspan="4" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; text-align: center; vertical-align: top;">12</td></tr>
+<tr style="-webkit-font-smoothing: antialiased; background-color: #f9f9f9; box-sizing: border-box;"><th class="text-nowrap" scope="row" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top; white-space: nowrap;">Độ rộng mỗi cột</th><td class="text-muted" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; color: #777777; line-height: 1.42857143; padding: 8px; vertical-align: top;">Tự động</td><td style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top;">~62px</td><td style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top;">~81px</td><td style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top;">~97px</td></tr>
+<tr style="-webkit-font-smoothing: antialiased; box-sizing: border-box;"><th class="text-nowrap" scope="row" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top; white-space: nowrap;">Khoảng cách</th><td colspan="4" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; text-align: center; vertical-align: top;">30px (15px bên)</td></tr>
+<tr style="-webkit-font-smoothing: antialiased; background-color: #f9f9f9; box-sizing: border-box;"><th class="text-nowrap" scope="row" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top; white-space: nowrap;">Nestable</th><td colspan="4" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; text-align: center; vertical-align: top;">có</td></tr>
+<tr style="-webkit-font-smoothing: antialiased; box-sizing: border-box;"><th class="text-nowrap" scope="row" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top; white-space: nowrap;">Offsets</th><td colspan="4" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; text-align: center; vertical-align: top;">Có</td></tr>
+<tr style="-webkit-font-smoothing: antialiased; background-color: #f9f9f9; box-sizing: border-box;"><th class="text-nowrap" scope="row" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; vertical-align: top; white-space: nowrap;">Column ordering</th><td colspan="4" style="-webkit-font-smoothing: antialiased; border: 1px solid rgb(221, 221, 221); box-sizing: border-box; line-height: 1.42857143; padding: 8px; text-align: center; vertical-align: top;">Có</td></tr>
+</tbody></table>
+									</p>
+								</div>
+							</div>
+                        </div>
+                        <div class="tab-pane" id="cau4">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">Câu 4</h3>
+								</div>
+								<div class="panel-body">
+									<p>
+										Chúng ta sử dụng class <code>.btn</code> để định nghĩa button trong Bootstrap (ngoài ra còn nhiều class hỗ trợ màu sắc đẹp mắt cho button như <code>.btn-primary</code>,<code>.btn-success</code>,...)
+										<br><br>
+										Để thêm biểu tượng, chúng ta sử dụng <strong>Glyphicons</strong> được định nghĩa sẵn trong thư mục /font của Bootstrap.
+									</p>
+									<pre style="color: blue">
+	&lt;button type="button" class="btn btn-primary"&gt;&lt;span glyphicon glyphicon-home&gt;Button&lt;/span&gt;&lt;/button&gt;
+				
+				<button type="button" class="btn btn-success"><span glyphicon glyphicon-home>Button</span></button>
+									</pre>
+									<p>
+										Thanh Progress Bar (tiến trình):
+									</p>
+									<pre style="color: blue">
+		&lt;div class="progress progress-striped"&gt;
+                        &lt;div class="progress-bar" style="width: 60%;"&gt;          
+                        &lt;/div&gt;
+                &lt;/div&gt;
+									</pre>
+									<div class="progress progress-striped">
+                        				<div class="progress-bar" style="width: 60%;">
+                        				</div>
+                    				</div>
+                    				<p>
+                    					Các loại cảnh báo: sử dụng class <code>.alert</code>
+                    				</p>
+                    				<pre style="color: blue">
+    		&lt;div class="alert alert-success" role="alert"&gt;...&lt;/div&gt;
+		&lt;div class="alert alert-info" role="alert"&gt;...&lt;/div&gt;
+		&lt;div class="alert alert-warning" role="alert"&gt;...&lt;/div&gt;
+		&lt;div class="alert alert-danger" role="alert"&gt;...&lt;/div&gt;
+                    				</pre>
+                    				<div class="alert alert-success" role="alert">...</div>
+									<div class="alert alert-info" role="alert">...</div>
+									<div class="alert alert-warning" role="alert">...</div>
+									<div class="alert alert-danger" role="alert">...</div>
+									<p>Navigation và Dropdown menu</p>
+									<pre style="color: blue">
+	&lt;ul class="nav navbar-nav"&gt;
+        	&lt;li&gt;&lt;a style="color: blue" href=""&gt;Navigation&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="dropdown"&gt;
+        			&lt;a style="color: blue" data-toggle="dropdown" href=""&gt;Dropdown&lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+        				&lt;ul class="dropdown-menu"&gt;
+            					&lt;li&gt;&lt;a href="#"&gt;Ahihi 1&lt;/a&gt;&lt;/li&gt;
+            					&lt;li&gt;&lt;a href="#"&gt;Ahihi 2&lt;/a&gt;&lt;/li&gt;
+            					&lt;li&gt;&lt;a href="#"&gt;Ahihi 3&lt;/a&gt;&lt;/li&gt;
+        				&lt;/ul&gt;
+    		&lt;/li&gt;
+    	&lt;/ul&gt;
+									</pre>
+                        				<ul class="nav navbar-nav">
+                            				<li><a style="color: blue" href="">Navigation</a></li>
+                            				<li class="dropdown">
+                								<a style="color: blue" data-toggle="dropdown" href="">Dropdown<span class="caret"></span></a>
+                								<ul class="dropdown-menu">
+                    								<li><a href="#">Ahihi 1</a></li>
+                    								<li><a href="#">Ahihi 2</a></li>
+                    								<li><a href="#">Ahihi 3</a></li>
+                								</ul>
+            								</li>
+                        				</ul>
+								</div>
+							</div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /main -->
+
+</body>
+</html>             

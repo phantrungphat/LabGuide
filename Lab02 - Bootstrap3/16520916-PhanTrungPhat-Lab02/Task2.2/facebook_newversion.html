@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Lab02 - Task 2.2</title>
+	<link REL="SHORTCUT ICON" HREF="image/icon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.1.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+    <script src="bootstrap-3.1.1-dist/js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+	
+	<!-- header -->
+	<div id="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-6 col-md-6 removePaddingMargin">
+					<a href="#"><img id="editlogo" src="image/logo.png" alt="facebook"></a>
+				</div>
+				<div class="Nho col-sm-6 col-md-6 col-md-6 removePaddingMargin" style="margin-top: 10px">
+					<div>
+						<div class="col-sm-5 removePaddingMargin">
+							<div class="form-group">
+								<label for="inpemail" style="color: white; font-size: 12px;">Email hoặc điện thoại</label>
+                  				<input type="email" class="form-control" id="email">
+							</div>
+						</div>
+						<div class="col-sm-7 removePaddingMargin">
+							<label for="inppass" style="color: white; font-size: 12px;">Mật khẩu</label>
+							<div class="form-group">
+									<div class="col-sm-8 removePaddingMargin">
+                  						<input type="password" class="form-control" id="password">
+									</div>
+								
+								<div class="col-sm-4 removePaddingMargin">
+									<button type="button" class="btn btn-login">Đăng nhập</button>
+								</div>
+
+								<a href="#" style="color: #9CB4D4; font-size: 12px;">Quên tài khoản?</a>
+							</div>
+
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!-- /header -->
+
+	<!-- content -->
+	<div id="content">
+		<div class="container">
+			<div class="row">
+				<div class="Nho1 col-sm-6 col-md-6 col-md-6 removePaddingMargin">
+						<p id="word" style="padding-left: 0px">
+						Facebook giúp bạn kết nối và chia sẻ với mọi người trong cuộc sống của bạn.</p>
+						
+						<div id="map"><img src="image/bando.png" class="img-responsive" alt="Bản đồ"></div>
+				</div>
+				<div class="Nho1 col-sm-6 col-md-6 col-md-6 removePaddingMargin">
+					<div id="right">
+						<h1><b>Đăng ký</b></h1>
+						<p>Luôn miễn phí.</p>
+
+						<form id="myform1" class="navbar-form">
+        					<div class="form-group">
+            					<input type="text" class="form-control" placeholder="Họ">
+        					</div>
+        					<div class="form-group">
+            					<input type="text" class="form-control" placeholder="Tên">
+        					</div>
+    					</form>
+
+    					<div class="form-group" id="phone">
+            				<input type="text" class="form-control" placeholder="Số di động hoặc email">
+        				</div>
+
+        				<div class="form-group" id="pass">
+            				<input type="text" class="form-control" placeholder="Mật khẩu mới">
+        				</div>
+						
+        				<p>Ngày sinh</p>
+        				<div class="col-md-2" id="day">
+        						<select class="ngaysinh">
+							<option value="n1">1</option> <option value="n2">2</option> <option value="n3">3</option>
+							<option value="n4">4</option> <option value="n5">5</option> <option value="n6">6</option>
+							<option value="n7">7</option> <option value="n8">8</option> <option value="n9">9</option>
+							<option value="n10">10</option> <option value="n11">11</option> <option value="n12">12</option>
+							<option value="n13">13</option> <option value="n14">14</option> <option value="n15">15</option>
+							<option value="n16">16</option> <option value="n17">17</option> <option value="n18">18</option>
+							<option value="n19">19</option> <option value="n20">20</option> <option value="n21">21</option>
+							<option value="n22">22</option> <option value="n23">23</option> <option value="n24">24</option>
+							<option value="n25">25</option> <option value="n26">26</option> <option value="n27">27</option>
+							<option value="n28">28</option> <option value="n29">29</option> <option value="n30">30</option>
+							<option value="n31">31</option>
+						</select>
+        				</div>
+        				<div class="col-md-2" id="month">
+        					<select class="ngaysinh">
+							<option value="n1">tháng 1</option> <option value="n2">tháng 2</option> <option value="n3">tháng 3</option>
+							<option value="n4">tháng 4</option> <option value="n5">tháng 5</option> <option value="n6">tháng 6</option>
+							<option value="n7">tháng 7</option> <option value="n8">tháng 8</option> <option value="n9">tháng 9</option>
+							<option value="n10">tháng 10</option> <option value="n11">tháng 11</option> <option value="n12">tháng 12</option>
+						</select>
+        				</div>
+        				<div class="col-md-2" id="year">
+        					<select class="ngaysinh">
+								<option value="n1">1998</option> <option value="n2">1999</option> <option value="n3">2000</option>
+								<option value="n4">2001</option> <option value="n5">2002</option> <option value="n6">2003</option>
+								<option value="n7">2004</option> <option value="n8">2005</option> <option value="n9">2006</option>
+								<option value="n10">2007</option> <option value="n11">2008</option> <option value="n12">2009</option>
+								<option value="n13">2010</option> <option value="n14">2011</option> <option value="n15">2012</option>
+								<option value="n16">2013</option> <option value="n17">2014</option> <option value="n18">2015</option>
+								<option value="n19">2016</option> <option value="n20">2017</option> <option value="n21">2018</option>
+							</select>
+        				</div>
+        				<div class="col-md-5" id="why">
+        					<span><a href="">Tại sao tôi cần cung cấp <br>ngày sinh của mình?</a></span>
+        				</div>
+        				
+						<div id="gt">
+							<br>
+							<br>
+							<label><input type="radio" name="gioitinh">Nữ </label>
+							<label><input type="radio" name="gioitinh" id="nam">Nam </label> 
+						</div>
+						
+						<div class="col-md-9" id="mark">
+							Bằng cách nhấp vào Đăng ký, bạn đồng ý với <a href="">Điều khoản</a>, <a href="">Chính sách dữ liệu</a> và <a href="">Chính sách cookie</a> của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào.
+						</div>	
+						
+						<div class="clearfix"></div>
+						<button type="button" class="button btn btn-success btn-lg"><b>Đăng ký</b></button>
+						
+						<div class="col-md-9" style="padding: 0;margin: 30px 0px;">
+							<div style="font-weight: bold"><p style="font-size: 13px"><a href="">Tạo Trang</a> dành cho người nổi tiếng, nhãn hiệu hoặc doanh nghiệp.</p></div>
+						</div>
+						
+
+        			</div>
+        				
+						
+						
+						
+
+					</div>
+			</div>
+		</div>
+	
+	<!-- /content -->
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-12 col-md-12 removePaddingMargin">
+			<ul class="list-inline" id="languagetop">
+	          <li class="list-inline-item"><a href="#" style="color: #737373;">Tiếng Việt</a></li>
+	          <li class="list-inline-item"><a href="#">English (UK)</a></li>
+	          <li class="list-inline-item"><a href="#">中文(台灣)</a></li>
+	          <li class="list-inline-item"><a href="#">한국어</a></li>
+	          <li class="list-inline-item"><a href="#">日本語</a></li>
+	          <li class="list-inline-item"><a href="#">Français (France)</a></li>
+	          <li class="list-inline-item"><a href="#">ภาษาไทย</a></li>
+	          <li class="list-inline-item"><a href="#">Español</a></li>
+	          <li class="list-inline-item"><a href="#">Português (Brasil)</a></li>
+	          <li class="list-inline-item"><a href="#">Deutsch</a></li>
+	          <li class="list-inline-item"><a href="#">Italino</a></li>
+	          <li class="list-inline-item"><button type="button" class="button2 btn btn-default"><strong>+</strong></button></li>
+        	</ul>
+        	<div style="border-top:  1px solid #dddfe2;margin-left: 25px;"></div>
+        	<div>
+	          <ul class="list-inline" id="hagtag">
+	            <li class="list-inline-item"><a href="#">Đăng ký</a></li>
+	            <li class="list-inline-item"><a href="#">Đăng nhập</a></li>
+	            <li class="list-inline-item"><a href="#">Messenger</a></li>
+	            <li class="list-inline-item"><a href="#">Facebook Lite</a></li>
+	            <li class="list-inline-item"><a href="#">Tìm bạn bè</a></li>
+	            <li class="list-inline-item"><a href="#">Danh bạ</a></li>
+	            <li class="list-inline-item"><a href="#">Trang cá nhân</a></li>
+	            <li class="list-inline-item"><a href="#">Trang</a></li>
+	            <li class="list-inline-item"><a href="#">Hạng mục trang</a></li>
+	            <li class="list-inline-item"><a href="#">Điểm</a></li>
+	            <li class="list-inline-item"><a href="#">Trò chơi</a></li>
+	            <li class="list-inline-item"><a href="#">Vị trí</a></li>
+	            <li class="list-inline-item"><a href="#">Marketplace</a></li>
+	            <li class="list-inline-item"><a href="#">Nhóm</a></li>
+	            <li class="list-inline-item"><a href="#">Instagram</a></li>
+	            <li class="list-inline-item"><a href="#">Địa phương</a></li>
+	            <li class="list-inline-item"><a href="#">Trang gây quỹ</a></li>
+	            <li class="list-inline-item"><a href="#">Giới thiệu</a></li>
+	            <li class="list-inline-item"><a href="#">Tạo quảng cáo</a></li>
+	            <li class="list-inline-item"><a href="#">Tạo trang</a></li>
+	            <li class="list-inline-item"><a href="#">Nhà phát triển</a></li>
+	            <li class="list-inline-item"><a href="#">Tuyển dụng</a></li>
+	            <li class="list-inline-item"><a href="#">Quyền riêng tư</a></li>
+	            <li class="list-inline-item"><a href="#">Cookie</a></li>
+	            <li class="list-inline-item"><a href="#">Lựa chọn quảng cáo</a></li>
+	            <li class="list-inline-item"><a href="#">Điều khoản</a></li>
+	            <li class="list-inline-item"><a href="#">Bảo mật tài khoản</a></li>
+	            <li class="list-inline-item"><a href="#">Trợ giúp đăng nhập</a></li>
+	            <li class="list-inline-item"><a href="#">Trợ giúp</a></li>
+	          </ul>
+        	</div>
+
+        	<p style="color: #737373;font-size: 11px; margin: 10px 0px;">
+        		Facebook © 2019
+        	</p>
+		</div>
+		</div>
+		</div>
+	</div>
+	<!-- /footer -->
+</body>
+</html>

@@ -1,0 +1,32 @@
+#menu {
+	background: #48525D;
+}
+#bg-content-left {
+	background: #F5F5F5;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-nav li .active {
+	background-color: #48525D;
+  	font-weight: bold;
+ 	color: white !important;
+}
+#bg-content-left ul .active {
+	background-color: red;
+  	color: white !important;
+  	font-weight: bold;
+}
+.nm {
+	background-color: white;
+	font-weight: normal;
+}

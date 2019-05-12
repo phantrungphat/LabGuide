@@ -1,0 +1,73 @@
+.r {
+	color: #d44950;
+}
+.b {
+	color: #2f6f9f;
+}
+.gr {
+	color: green;
+}
+.n {
+	color: #999;
+}
+.bl {
+	color: black;
+}
+.remove-padding-margin {
+	padding: 0;
+	margin: 0;
+}
+
+#fullscreen {
+	background-image: url("image/avatar.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container{
+ position: relative;
+}
+.form{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+ text-align: center;
+}
+#ThanhNgu {
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 100%;
+    color: white;
+    text-align: center;
+}
+.well {
+	background: #c3ff00;
+}
+
+input {
+    background: rgba(0,0,0,0.0);
+    border: none;
+    width: 60%;
+    color: white;
+    text-align: left;
+    line-height: 1;
+    outline:none;
+    text-decoration: underline;
+}
+
+input:hover {
+	outline: none;
+    -webkit-appearance:none;
+}
+
+#DateandBirth {
+	font-size: 200%;
+    color: white;
+    text-align: center;  
+}

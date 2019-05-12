@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task 3.1 - Lab 03 - Javascript</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.1.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<script src="bootstrap-3.1.1-dist/js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+
+	
+	<!-- header -->
+	<div id="header">
+		<div class="container-fluid">
+			<div class="row">
+			<nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top" role="navigation">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">16520916 - Phan Trung Phat</a>
+					</div>
+			
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse navbar-ex1-collapse">
+						
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li><a href="#">Separated link</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div>
+			</nav>
+			</div>
+		</div>
+	</div>
+	<!-- /header -->
+
+	<!-- content -->
+  	<div id="content" class="remove-padding-margin">
+  		<div class="container-fluid">
+  			<div class="row">
+  			<div class="col-md-10">
+  				<div id="target1" class="collapse in">
+				   <div class="panel panel-success">
+				   	<div class="panel-heading">
+				   		<h3 class="panel-title">Câu 1: Có những cách đặt Javascript nào trong file HTML? Cho ví dụ minh họa?</h3>
+				   	</div>
+				   	<div class="panel-body">
+				   		Tương tự như thêm CSS, để thêm Javascript vào trong file HTML, chúng ta có 3 cách:
+				   		<br>
+				   		<br>
+				   		<span class="r"><strong>Cách 1: Internal - viết trong file HTML hiện tại</strong></span>
+				   		<p><br>Viết đoạn mã Javascript trong cặp thẻ <span class="r">&lt;script&gt;&lt;/script&gt;</span>. Đoạn mã thường được đặt tại phần <strong>head</strong>, tuy nhiên đây không phải là điều bắt buộc, bạn có thể đặt ở đâu tùy thích, miễn là nằm trong cặp thẻ <span class="r">&lt;script&gt;&lt;/script&gt;</span>.</p>
+				   		<pre>
+				   	<span class="n">&lt;!--Đặt tại thẻ head --&gt;</span>
+						<span class="r">&lt;html&gt;</span>
+						    <span class="r">&lt;head&gt;</span>
+						        <span class="r">&lt;title&gt;&lt;/title&gt;</span>
+						        <span class="r">&lt;script</span><span class="gr"> language=</span>"javascript"<span class="r">&gt;</span>
+						            <span class="b">alert</span>("Hello World!");
+						        <span class="r">&lt;/script&gt;
+						    &lt;/head&gt;
+						    &lt;body&gt;
+						         
+						    &lt;/body&gt;
+						&lt;/html&gt;</span>
+						</pre>
+
+						<pre>
+				   	<span class="n">&lt;!--Đặt tại thẻ body --&gt;</span>
+						<span class="r">&lt;html&gt;</span>
+						    <span class="r">&lt;head&gt;</span>
+						        <span class="r">&lt;title&gt;&lt;/title&gt;
+						    &lt;/head&gt;
+						    &lt;body&gt;</span>
+						         <span class="r">&lt;script</span><span class="gr"> language=</span>"javascript"<span class="r">&gt;</span>
+						            <span class="b">alert</span>("Hello World!");
+						        <span class="r">&lt;/script&gt;
+						    &lt;/body&gt;
+						&lt;/html&gt;</span>
+						</pre>
+
+						<p><span class="r"><strong>Cách 2: Inline  - viết trực tiếp trong thẻ HTML</strong></span></p>
+						Cách này có nghĩa là viết trực tiếp Javascript vào trong thẻ HTML.
+						<pre>
+			<span class="r">
+			<span class="n">&lt;!-- Khi nhấn vào button thì hiển thị thời gian hiện tại--&gt;</span>
+			&lt;button <span class="b">type</span><span class="bl">="button"</span>
+                		<span class="b">onclick</span><span class="bl">="document.getElementById('hien-thi-thoi-gian-ra').innerHTML = Date()"<span class="r">&gt;</span>Button</span>&lt;/button&gt;
+            		&lt;p <span class="gr">id</span><span class="bl">="hien-thi-thoi-gian-ra"</span>&gt;&lt;/p&gt;
+			</span>
+						</pre>
+
+						<p><span class="r"><strong>Cách 3: External - viết ra một file js khác rồi import vào</strong></span></p>
+						Đối với cách này, bạn phải tạo một file có phần mở rộng là <strong>.js</strong>, sau đó dùng thẻ script để import vào. Lúc này, bên trong file .js không cần phải có thẻ script nữa vì đã có phần mở rộng là .js nên trình duyệt sẽ tự động nhận diện đây là file chứa mã Javascript.
+						<pre>
+			<span class="r">&lt;script <span class="gr">language</span><span class="bl">="javascript"</span> <span class="gr">src</span><span class="bl">="Ahihi.js"</span>>&lt;/script&gt;</span>
+						</pre> 
+				   	</div>
+				   </div>
+				</div>
+				<div id="target2" class="collapse">
+				   <div class="panel panel-success">
+				   	<div class="panel-heading">
+				   		<h3 class="panel-title">Câu 2: Có thể hiển thị dữ liệu từ Javascript với những cách nào? Cho ví dụ minh họa.</h3>
+				   	</div>
+				   	<div class="panel-body">
+				   		<p>Javascript có thể hiển thị dữ liệu theo nhiều cách khác nhau.</p>
+				   		<ul>
+				   			<li>Viết vào bên trong thẻ HTML, sử dụng <code>innerHTML</code></li>
+				   			<li>Viết lên trên trình duyệt, sử dụng <code>document.write()</code></li>
+				   			<li>Viết theo hộp thoại thông báo, sử dụng <code>window.alert()</code></li>
+				   			<li>viết lên browser console, sử dụng <code>console.log()</code></li>
+				   		</ul>
+				   		<p>Đầu tiên, sử dụng <strong>innerHTML</strong></p>
+				   		Để truy cập đến một phần tử HTML, chúng ta phải sử dụng phương thức <code>document.getElementById(id)</code>.
+				   		<br><strong>id</strong> ở đây dùng để xác định thẻ HTML nào, <strong>innerHTML</strong> dùng để định nghĩa nội dung của thẻ HTML.
+				   		<p>Ngoài ra, còn có các lựa chọn khác như <code>innerText</code>,<code>innerContent</code>.</p>
+				   		<pre>
+	
+				<span class="r">
+			&lt;body&gt;
+				&lt;p&gt;<span class="bl">Chèn chữ Ahihi vào thẻ p có id là display</span>&lt;/p&gt;
+
+				&lt;p <span class="gr">id</span><span class="bl">="display"</span>&gt;&lt;/p&gt;
+
+				&lt;script&gt;
+					<span class="b">document.getElementById("display").innerHTML</span><span class="bl"> = "Ahihi";</span> 
+				&lt;/script&gt;
+			&lt;/body&gt;</span>
+				   		</pre>
+
+				   		<p>Tiếp theo là <strong>document.write()</strong></p>
+				   		<p>Khi sử dụng <strong>document.write()</strong>, nội dung mà bạn muốn hiển thị sẽ được hiển thị ngay đúng vị trí mà nó được đặt trong trang web.</p>
+				   		<pre>
+			<span class="r">
+				&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+					&lt;body&gt;
+				<span class="n">&lt;!-- Đối với đoạn code này thì chương trình sẽ in ra tuần tự đúng như những gì ta mong muốn --&gt;</span>
+    						&lt;h1&gt;<span class="bl">Dòng đầu tiên nè!</span>&lt;/h1&gt;
+
+    						&lt;script&gt;<span class="b">document.write</span><span class="bl">("&lt;h1&gt;Ahihi 1&lt;/h1&gt;");</span>&lt;/script&gt;
+
+    						&lt;h1&gt;<span class="bl">Để cho nó cách 2 cái ra nè!</span>&lt;/h1&gt;
+
+    						&lt;script&gt;<span class="b">document.write</span><span class="bl">("&lt;h1&gt;Tài liệu học MySQL&lt;/h1&gt;");</span>&lt;/script&gt;
+
+   		 				&lt;script&gt;<span class="b">document.write</span><span class="bl">("&lt;h1&gt;Tài liệu học PHP&lt;/h1&gt;");</span>&lt;/script&gt;
+
+					&lt;/body&gt;
+				&lt;/html&gt;
+			</span>
+				   		</pre>
+
+				   		<p><strong>document.write()</strong> thường được sử dụng trong khâu testing, nếu nó được sử dụng khi trang web đã tải hoàn toàn thì nó sẽ xóa tất cả các phần tử HTML.</p>
+				   		<pre>
+				<span class="r">
+<span class="n">&lt;!-- Đối với đoạn code này sau khi chạy thì màn hình chỉ có dòng chữ Ahihi khi ta bấm button bởi vì trang web đã tải hoàn tất và chúng ta sử dụng document.write() để đè lên.&gt;</span>
+			&lt;!DOCTYPE html&gt;
+			&lt;html&gt;
+				&lt;body&gt;
+					&lt;h1&gt;<span class="bl">Dòng này sẽ không hiển thị 1</span>&lt;/h1&gt;
+				 	&lt;p&gt;<span class="bl">Dòng này sẽ không hiển thị 2</span>&lt;/p&gt;
+					&lt;button <span class="gr">type</span><span class="bl">=&quot;button&quot;</span> <span class="gr">onclick</span><span class="bl">=&quot;</span><span class="b">document.write("Ahihi")</span>&quot;&gt;<span class="bl">Button</span>&lt;/button&gt;
+				&lt;/body&gt;
+			&lt;/html&gt;
+				</span>
+				   		</pre>
+
+				   		<p>Tiếp đến là sử dụng hàm <strong>alert()</strong></p>
+				   		<p>Hàm alert() có nhiệm vụ in một thông báo popup, có tham số truyền vào là nội dung ta muốn thông báo với người sử dụng.</p>
+				   		<p>Ngoài ra còn có <code>confirm()</code> và <code>prompt()</code></p>.
+
+				   		<pre>
+		<span class="r">&lt;input <span class="gr">type</span><span class="bl">="button"</span> <span class="gr">onclick</span><span class="bl">=</span><span class="b">"alert('Xin chào các bạn')"</span> <span class="gr">value</span><span class="bl">="Click Me"</span>/&gt;</span>
+		<br>
+			<input type="button" onclick="alert('Xin chào các bạn')" value="Click Me"/>
+				   		</pre>
+
+				   		<p>Cuối cùng là <strong>console.log()</strong></p>
+				   		<p>Hàm console.log() thường được sử dụng để debug, nó có nhiệm vụ show ra giá trị của tất cả các loại dữ liệu như number, integer, array, object,... </p>
+				   		<pre>
+		<span class="n">&lt;!-- Chúng ta cần truy cập đến tab Console trong Website Debug để xem giá trị của biến website được in ra --&gt;</span>
+				<span class="b">var</span> <span class="bl">website =</span> <span class="b">'Ahihi.com'</span><span class="bl">;</span>
+					<span class="bl">console.log(website);</span>
+				   		</pre>
+				   	</div>
+				   </div>
+				</div>
+				<div id="target3" class="collapse">
+				   <div class="panel panel-success">
+				   	<div class="panel-heading">
+				   		<h3 class="panel-title">Câu 3: Làm thế nào để truy xuất (lấy giá trị) 1 thẻ HTML bất kỳ theo ID, theo Class, theo Name, theo tên thẻ HTML và theo CSS Selector? Cho ví dụ minh họa.
+</h3>
+				   	</div>
+				   	<div class="panel-body">
+				   		<p>Chúng ta sẽ sử dụng các phương thức sau để truy xuất đến các đối tượng:</p>
+				   		<ul>
+				   			<li><code>document.getElementById()</code></li>
+				   			<li><code>document.getElementsByClassName()</code></li>
+				   			<li><code>document.getElementsByName()</code></li>
+				   			<li><code>document.getElementsByTagName()</code></li>
+				   		</ul>
+				   		<p>Sau đó sử dụng <strong>innerHTML</strong> để lấy nội dung hoặc sử dụng <strong>document.CacPhuongThucOTren().attributeName</strong> để lấy giá trị của đối tượng đã truy xuất.</p>
+				   		<strong>document.getElementById()</strong>
+						<p>Phương thức document.getElementById() là một trong những phương thức phổ biến nhất của HTML DOM, nó được sử dụng rất thường xuyên để thao tác hoặc lấy thông tin của form hoặc một phần tử bất kỳ.</p>
+						<p>Phương thức sẽ trả về Null nếu không có phần tử nào có thuộc tính ID được cung cấp.</p>
+						<p>Phương thức getElementById() sẽ trả về phần tử có thuộc tính ID được cung cấp.</p>
+
+						<pre>
+							<span class="r">
+		&lt;html&gt;
+    			&lt;body&gt;
+        			&lt;script <span class="gr">language=</span><span class="bl">"javascript"</span>&gt;
+		          		<span class="b">function</span> <span class="bl">change()
+		          		{</span>
+		             			<span class="gr">// Lấy đối tượng</span>
+		             			<span class="bl">var object = document.getElementById("object");</span>
+		         
+		             			<span class="gr">// lấy thuộc tính type</span>
+		             			<span class="bl">var type = object.type;</span>
+				
+		             			<span class="gr">// kiểm tra thuộc tính type và thay đổi</span>
+		            			<span class="bl">
+		            			if (type == "button"){
+		          
+		               				object.type = 'text';
+		            			}
+		            			else{
+		                			object.type = "button";
+		            			}</span>
+		        
+		          		<span class="bl">}</span>
+		        	&lt;/script&gt;
+		        	&lt;input <span class="gr">type=</span><span class="bl">"button"</span> <span class="b">value="CLick me"</span> <span class="gr">onclick=</span><span class="bl">"change()"</span> <span class="gr">id=</span><span class="bl">"object"</span> /&gt;
+		    	&lt;/body&gt;
+		&lt;/html&gt;
+							</span>
+							<script language="javascript">
+          					function change()
+          					{
+             // Lấy đối tượng
+             var object = document.getElementById("object");
+          
+             // lấy thuộc tính type
+             var type = object.type;
+         
+             // kiểm tra thuộc tính type và thay đổi
+            if (type == "button"){
+           
+               object.type = 'text';
+            }
+            else{
+                object.type = "button";
+            }
+         
+          }
+        </script>
+        <input type="button" value="Kết quả" onclick="change()" id="object" />
+						</pre>
+
+						<strong>document.getElementsByClassName()</strong>
+						<p>Tương tự document.getElementById(), phương thức document.getElementsByClassName() sẽ trả về tập hợp các phần tử trong trang có thuộc tính class được cung cấp khi gọi phương thức. Kết quả sẽ được trả về dưới dạng một đối tượng NodeList object.</p>
+						<pre>
+							<span class="r">
+			&lt;body&gt;
+		            &lt;h6&gt;<span class="bl">Ahihi</span>&lt;/h6&gt;
+		            &lt;h6 <span class="gr">class=</span><span class="bl">"demo"</span>&gt; <span class="bl">Số 1</span>&lt;/h6&gt;
+		            &lt;h6 <span class="gr">class=</span><span class="bl">"demo"</span>&gt; <span class="bl">Số 2</span>&lt;/h6&gt;
+		            &lt;h6 <span class="gr">class=</span><span class="bl">"demo"</span>&gt; <span class="bl">Số 3</span>&lt;/h6&gt;
+		        	&lt;button <span class="gr">onclick=</span><span class="bl">"changebackgroundcolor()"</span>&gt;<span class="bl">Xem kết quả</span>&lt;/button&gt;
+		        	&lt;script&gt;
+		            	<span class="b">function</span> <span class="bl">changebackgroundcolor(){</span>
+		                	<span class="bl">
+		                	var NodeObject = document.getElementsByClassName("demo");
+		                	NodeObject[0].style.color = "red";
+		                	NodeObject[1].style.color = "blue";
+		                	NodeObject[2].style.color = "yellow";
+		                	</span>
+		            	}
+		        	&lt;/script&gt;
+    			&lt;/body&gt;
+
+							</span>
+							</pre>
+						<div class="remove-padding-margin">
+							<h6>Ahihi</h6>
+		            <h6 class="demo"> Số 1</h6>
+		            <h6 class="demo"> Số 2</h6>
+		            <h6 class="demo"> Số 3</h6>
+		        	<button onclick="changebackgroundcolor()">Xem kết quả</button>
+		        	<script>
+		            	function changebackgroundcolor(){
+		                	
+		                	var NodeObject = document.getElementsByClassName("demo");
+		                	NodeObject[0].style.color = "red";
+		                	NodeObject[1].style.color = "blue";
+		                	NodeObject[2].style.color = "yellow";
+		                	
+		            	}
+		        	</script>
+						</div>	
+						
+						<strong><br>document.getElementsByName()</strong>
+						<p>Phương thức này có phần tương tự phương thức document.getElementsByClassName(), sẽ trả về tập hợp các phần tử trong trang có thuộc tính name được cung cấp khi gọi phương thức. Kết quả sẽ được trả về dưới dạng một đối tượng NodeList object.</p>
+						<p>Cú pháp: <strong>document.getElementsByName(name)</strong></p>
+						<p>name ví dụ như: thẻ h3 có name=demo,...</p>
+
+						<strong>document.getElementsByTagName()</strong>
+						<p>Phương thức này sẽ trả về tập hợp các phần tử trong trang có tên thẻ được cung cấp khi gọi phương thức. Kết quả sẽ được trả về dưới dạng một đối tượng NodeList object.</p>
+						<p>Bạn có thể truyền tham số * để lấy tất cả các phần tử trên trang.</p>
+						<p>Cú pháp: <strong>document.(tagname)</strong></p>
+						<p>tagname ví dụ như: h3, h1, li,...</p>
+				   	</div>
+				   </div>
+				</div>
+				<div id="target4" class="collapse">
+				   <div class="panel panel-success">
+				   	<div class="panel-heading">
+				   		<h3 class="panel-title">Câu 4: Xác định các lệnh Javascript tương ứng để thực hiện các yêu cầu:</h3>
+				   	</div>
+				   	<div class="panel-body">
+				   		<h4><strong>Hiển thị ngày tháng và thời gian hiện tại</strong></h4>
+				   		<pre>
+				<span class="r">&lt;body&gt;
+				    &lt;div&gt;<span class="bl">click vào button để xem kết quả</span>&lt;/div&gt;
+				    &lt;button <span class="gr">type=</span><span class="bl">"button"</span> <span class="gr">onclick=</span><span class="bl">"get()</span>"&gt;<span class="bl">Click</span>&lt;/button&gt;
+				    &lt;p <span class="gr">id=</span><span class="bl">"result"</span>&gt;&lt;/p&gt;
+				    &lt;script <span class="gr">type=</span><span class="bl">"text/javascript"</span>&gt;
+				        <span class="b">function</span> <span class="bl">get() {</span>
+				        <span class="n">&lt;!-- Sử dụng Date Object trong Javascript --&gt;</span>
+				            <span class="bl">var date = new Date();
+				            var data += 'Năm đầy đủ: ' + date.getFullYear() + '&lt;br /&gt;';
+				            data += 'Tháng: ' + date.getMonth() + '&lt;br /&gt;';
+				            data += 'Ngày: ' + date.getDate() + '&lt;br /&gt;';
+				            data += 'Giờ: ' + date.getHours() + '&lt;br /&gt;';
+				            data += 'Phút: ' + date.getMinutes() + '&lt;br /&gt;';
+				            data += 'Giây: ' + date.getSeconds() + '&lt;br /&gt;';
+				            document.getElementById('result').innerHTML = data;</span>
+				        <span class="bl">}</span>
+				    &lt;/script&gt;
+				&lt;/body&gt;</span>
+
+				<div>click vào button để xem kết quả</div>
+	<button type="button" onclick="get()">Click</button>
+				    <p id="result"></p>
+				    <script type="text/javascript">
+				        function get() {
+				            var date = new Date();
+				            var data = 'Năm đầy đủ: ' + date.getFullYear() + '<br />';
+				            data += 'Tháng: ' + date.getMonth() + '<br />';
+				            data += 'Ngày: ' + date.getDate() + '<br />';
+				            data += 'Giờ: ' + date.getHours() + '<br />';
+				            data += 'Phút: ' + date.getMinutes() + '<br />';
+				            data += 'Giây: ' + date.getSeconds() + '<br />';
+				            document.getElementById('result').innerHTML = data;
+				        }
+				    </script>
+				   		</pre>
+				   		
+				   		<h4><strong>Thay đổi nội dung trong 1 thẻ HTML đang có</strong></h4>
+						<pre>
+				<span class="r">&lt;body&gt;
+				    &lt;div&gt;<span class="bl">click vào button để xem kết quả</span>&lt;/div&gt;
+				    &lt;button <span class="gr">type=</span><span class="bl">"button"</span> <span class="gr">onclick=</span><span class="bl">"changeND1()</span>"&gt;<span class="bl">Click1</span>&lt;/button&gt;
+				    
+				    &lt;p <span class="gr">id=</span><span class="bl">"result1"</span>&gt;<span class="bl">Nội dung số 1</span>&lt;/p&gt;
+				    &lt;script <span class="gr">type=</span><span class="bl">"text/javascript"</span>&gt;
+				        <span class="b">function</span> <span class="bl">changeND1() {</span>
+				            <span class="bl">var data1 = document.getElementById('result1').innerHTML;
+				            if (data1 == "Nội dung số 1")
+				            	data1 = "Nội dung số 2";
+				            else data1 = "Nội dung số 1";
+				            document.getElementById('result1').innerHTML = data1;</span>
+				        <span class="bl">}</span>
+				        
+				    &lt;/script&gt;
+				&lt;/body&gt;</span>
+
+
+						<div>click vào button để xem kết quả</div>
+	<button onclick="changeND1()">Click1</button>
+				    <p id="result1">Nội dung số 1</p>
+				    <script>
+				        function changeND1() {
+				        	var data1 = document.getElementById('result1').innerHTML;
+				            if (data1 == "Nội dung số 1")
+				            	data1 = "Nội dung số 2";
+				            else data1 = "Nội dung số 1";
+				            document.getElementById('result1').innerHTML = data1;
+				        }
+				        
+				    </script>	
+						</pre>
+						
+
+						<h4><strong>Hiển thị một số ngẫu nhiên (random) từ 1 đến 1000</strong></h4>
+						<pre>
+				<span class="r">&lt;!DOCTYPE html&gt;
+				&lt;html&gt;
+					&lt;body&gt;
+
+						&lt;p&gt;<span class="bl">Click the button to display a random number between 1 and 1000.</span>&lt;/p&gt;
+
+						&lt;button <span class="b">onclick="myFunction()</span>"&gt;<span class="bl">Button</span>&lt;/button&gt;
+
+						&lt;p <span class="gr">id=</span><span class="bl">"demo11"</span>&gt;&lt;/p&gt;
+
+					&lt;script&gt;
+						<span class="b">function</span> <span class="bl">myFunction() {
+						<span class="n">&lt;!-- Ở đây ta sử dụng phương thức Math.random() để random con số từ 0 đến 1 --&gt;</span>
+						<span class="n">&lt;!-- Để cho số hiển thị đẹp, số nguyên ta thêm phương thức Math.floor() --&gt;</span>
+						<span class="n">&lt;!-- Nhân 1000 và cộng 1 giúp ta điều chỉnh khoảng random chính xác --&gt;</span>
+						  var x = Math.floor((Math.random() * 1000) + 1);
+						  document.getElementById("demo11").innerHTML = x;
+						}</span>
+					&lt;/script&gt;
+
+					&lt;/body&gt;
+				&lt;/html&gt;</span>
+
+						<p>Click the button to display a random number between 1 and 1000.</p>
+	<button onclick="myFunction()">Button</button>
+						<p id="demo11"></p>
+
+					<script>
+						function myFunction() {
+						  var x = Math.floor((Math.random() * 1000) + 1);
+						  document.getElementById("demo11").innerHTML = x;
+						}
+					</script>
+
+						</pre>
+
+
+						<h4><strong>Cộng, trừ, nhân, chia, chia lấy phần dư</strong></h4>
+
+						<pre>
+						<span class="bl"><span class="b">var</span> a = 20;
+						<span class="b">var</span> b = 5;
+ 
+						<span class="gr">// Cộng: Kết quả biến c có giá trị 25</span>
+						var c = a + b;
+						<span class="gr">// Trừ: Kết quả biến d có giá trị 15</span>
+						var d = a - b;
+						<span class="gr">//Nhân: Kết quả biến e có giá trị 100</span>
+						var e = a * b;
+						<span class="gr">// Chia: Kết quả biến f có giá trị 4</span>
+						var f = a / b;
+						<span class="gr">// Chia lấy phần dư: Kết quả biến g có giá trị 0</span>
+						<span class="b">var</span> g = a % b;</span>
+						</pre>
+				   	</div>
+				   </div>
+				</div>
+  			</div>
+  			<div class="col-md-2 text-center" id="clickbutton">
+  				<ul class="list-group">
+  					<li class="list-group-item"><a class="btn btn-link" href="#" data-toggle="collapse" data-target="#target1">Câu 1</a></li>
+  					<li class="list-group-item"><a class="btn btn-link" href="#" data-toggle="collapse" data-target="#target2">Câu 2</a></li>
+  					<li class="list-group-item"><a class="btn btn-link" href="#" data-toggle="collapse" data-target="#target3">Câu 3</a></li>
+  					<li class="list-group-item"><a class="btn btn-link" href="#" data-toggle="collapse" data-target="#target4">Câu 4</a></li>
+  				</ul>
+  			</div>
+  		</div>
+  	</div>  
+  	<!-- /content -->
+
+
+	<script language="javascript" src="firstJS.js"></script>
+</body>
+</html>

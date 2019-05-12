@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task 3.2 - Lab 03 - Javascript</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.1.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="startTime()">
+	<script src="bootstrap-3.1.1-dist/js/jquery-3.3.1.min.js"></script>
+    <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+
+
+	<!-- header -->
+	<div class="" id="header">
+		<div class="container-fluid">
+			<div class="row">
+				<nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top" role="navigation">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">16520916 - Phan Trung Phat</a>
+						</div>
+				
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse navbar-ex1-collapse">
+							
+							<ul class="nav navbar-nav navbar-right">
+								
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Câu 1</a></li>
+										<li><a href="#">Câu 2</a></li>
+										<li><a href="#">Câu 3</a></li>
+										<li><a href="#">Câu 4</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<!-- /header -->
+	<div id="content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="panel-group" id="accordion">
+  					<div class="panel panel-info">
+    					<div class="panel-heading">
+      						<h4 class="panel-title">
+        					<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        					Câu 1: Những vị trí nào có thể đặt Javascript trong file HTML và dặt theo cú pháp nào? Nên đặt
+Javascript tại vị trí nào để có hiệu suất tốt nhất? Cho ví dụ minh họa.</a>
+      						</h4>
+    					</div>
+    					<div id="collapse1" class="panel-collapse collapse">
+      						<div class="panel-body">
+
+							<p>Đầu tiên, bạn có thể đặt đoạn mã <strong>Javascript</strong> bất cứ đâu trong tập tin HTML và bất cứ khi nào bạn muốn!. Bạn có thể: </p>
+							<ul>
+								<li>Tại thẻ <span class="r">&lt;head&gt;...&lt;/head&gt;</span></li>
+								<li>Tại thẻ <span class="r">&lt;body&gt;...&lt;/body&gt;</span></li>
+								<li>Cả thẻ <span class="r">&lt;head&gt;...&lt;/head&gt;</span> và <span class="r">&lt;body&gt;...&lt;/body&gt;</span></li>
+							</ul>
+							<p>Cũng như các ngôn ngữ lập trình khác, Javascript sẽ chạy biên dịch từ trên xuống dưới và từ trái qua phải. Chính vì vậy, nếu bạn sử dụng một hàm mà <strong>phía trên nó</strong> không tồn tại thì hàm đó sẽ bị báo lỗi undefined. Vì vậy, chúng ta cần cân nhắc cho việc đặt đoạn mã Javascript của chúng ta ở đâu thì sẽ hợp lý. Ngoài ra, để giải quyết trường hợp này chúng ta còn có thể sử dụng sự kiện <code>onload</code> trong Javascript.</p>
+							<p>Về phần cú pháp thì đã được nhắc đến tại <strong><u><i>Task3.1</i></u></strong>. Có 3 cách: Internal, External, và Inline. Mặc dù cho chúng ta đặt như thế nào thì đều phải đảm bảo rằng đoạn mã Javascript của chúng ta phải nằm trong cặp thẻ <span class="r">&lt;script&gt;...&lt;/script&gt;</span>.</p>
+							<p>Ở thời kỳ HTML5 chưa ra đời, có thể nói vị trí đặt Javascript tốt nhất đó là cuối trang và trước thẻ <code>body</code>. Bởi vì các bạn cứ tưởng tượng, nếu chúng ta đặt ở đầu trang, mã HTML đang tải và phải dừng lại để chờ tải về các tập tin Javascript được tham chiếu vào trang, quá trình này làm chậm hoặc thậm chí làm block trang web nếu nó nghiêm trọng. Chính vì thế, đặt đoạn mã Javascript ở cuối là đúng đắn.</p>
+							<p>Tuy nhiên, khi HTML5 ra đời đã giải quyết vấn đề này, hai thuộc tính <code>async</code> và <code>defer</code> được giới thiệu để sử dụng cho thẻ <span class="r">&lt;script&gt;</span>. Sử dụng hai thuộc tính này sẽ giúp mã lệnh JavaScript có thể được tải bất đồng bộ cùng với mã HTML. Điều này giúp cho trình duyệt có thể đồng thời tải cả mã HTML và JavaScript cùng một lúc.</p>
+							<p>Khi đó bạn nếu bạn sử dụng thẻ <span class="r">&lt;script&gt;</span> ở bên trong thẻ <span class="r">&lt;head&gt;</span> như sau:</p>
+							<pre>
+				<span class="r">&lt;/html&gt;
+				    &lt;head&gt;
+				        &lt;script <span class="gr">src=</span><span class="bl">"/js/main.js"</span> <span class="gr">type=</span><span class="bl">"text/javascript"</span> <span class="b">async</span>&gt;&lt;/script&gt;
+				    &lt;/head&gt;
+				&lt;body&gt;
+				...
+				&lt;/body&gt;
+				&lt;/html&gt;</span>
+							</pre>
+							<p>Tốc độ tải trang sẽ nhanh hơn khi để thẻ <span class="r">&lt;script&gt;</span> ở cuối trang (trước thẻ <span class="r">&lt;body&gt;</span>) vì lúc này chúng ta tận dụng được lợi thế trình duyệt tải về đồng thời HTML và JavaScript cùng một lúc.</p>
+
+      						</div>
+    					</div>
+  					</div>
+
+
+  					<div class="panel panel-info">
+    					<div class="panel-heading">
+      						<h4 class="panel-title">
+        					<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        					Câu 2: Trong Javascript có những kiểu dữ liệu nào? Làm thế nào để tạo một biến để lưu trữ giá
+trị tương ứng với những kiểu dữ liệu đó?</a>
+      						</h4>
+    					</div>
+    					<div id="collapse2" class="panel-collapse collapse">
+      						<div class="panel-body">
+
+							<p>Javascript có các kiểu dữ liệu Dynamic, nghĩa là việc kiểm tra kiểu được thực hiện trong lúc runtime thay vì compile time. Với ngôn ngữ được nhập động, một biến có cùng tên có thể được sử dụng để giữ các loại dữ liệu khác nhau.</p>
+							<p>Ví dụ ta có thể định nghĩa một biến a được gán để giữ các kiểu dữ liệu khác nhau hoặc khởi tạo nhưng không xác định.</p>
+							<pre>
+								<span class="r">
+							<span class="b">var</span> <span class="bl">a = 1998;</span> 	<span class="n">//a là kiểu number</span>
+							<span class="b">var</span> <span class="bl">a = "Ahihi";</span> 	<span class="n">//a là kiểu string</span>
+							<span class="b">var</span> <span class="bl">a = true;</span> 	<span class="n">//a là kiểu boolean</span>
+							<span class="b">var</span> <span class="bl">a;</span> 	<span class="n">//a là kiểu undefined</span>
+								</span>
+							</pre>
+							<p>Chúng không cần phải khai báo 1 cách rõ ràng với 1 kiểu dữ liệu trước khi chúng sử dụng.</p>
+
+							<h4><strong>Kiểu dữ liệu Number</strong></h4>
+							<p>Kiểu dữ liệu này dành cho cả số nguyên và số có dấu chấm động (integer và float). Nếu một số quá lớn chúng ta có thể sử dụng dạng mũ để biểu diễn, vd như: <span class="b">var</span> x = 1998e-5; ... Các số luôn luôn là 64 bit và kiểu float.</p>
+							<p>Có thể biểu diễn giá trí của Number dạng nhị phân, thập phân, thập lục phân,...</p>
+							<pre>
+							<span class="b">var</span> <span class="bl">x = 0xFF;</span>             <span class="n">// x có giá trị bằng 255</span>
+							</pre>
+
+							<h4><strong>Kiểu dữ liệu String</strong></h4>
+							<p>String là một tập hợp gồm các ký tự, chúng được viết bên trong cặp dấu nháy kép hoặc cặp dấu nháy đơn.</p>
+							<p>Trường hợp trong chuỗi cũng có xuất hiện dấu nháy đơn hoặc nháy đôi thì bắt buộc bạn phải thêm ký tự \ đằng trước dấu nháy đó nếu không sẽ bị lỗi cũ pháp.</p>
+							<pre>
+							<span class="b">var</span> <span class="bl">x = "Ahihi con \"khỉ\" già";</span>
+							</pre>
+							<p>Nếu chúng ta muốn nối chuỗi sử dụng dấu <strong>+</strong>.</p>
+							<pre>
+							<span class="b">var</span> <span class="bl">x = "Ahihi" + "Đồ ngốc";</span>		<span class="n">// Kết quả là chuỗi "Ahihi Đồ ngốc"</span>
+							</pre>
+
+							<h4><strong>Kiểu dữ liệu Booleans</strong></h4>
+							<p>Kiểu dữ liệu Boolean có thể là một trong hai giá trị, <strong>true</strong> hoặc <strong>false</strong>  Booleans được sử dụng để biểu diễn các giá trị luận lý được liên kết với nhánh logic của toán học, thông báo các thuật toán trong khoa học máy tính.</p>
+
+							<h4><strong>Kiểu dữ liệu Arrays</strong></h4>
+							<p>Mảng là một tập hợp các phần tử lại và mỗi phần tử sẽ được đánh dấu một vị trí trong tập hợp đó. Trong javascript nếu mảng có 10 phần tử thì các phần tử sẽ được đánh dấu từ 0 -9.</p>
+							<p>Để khai báo array, chúng ta có thể sử dụng từ khóa <span class="b">new Array()</span> hoặc sử dụng cặp dấu ngoặc vuông <span class="b">[]</span>.</p>
+							<pre>
+							<span class="b">var</span> <span class="bl">name_array = new Array(1,2,3);</span>
+							<span class="n">// hoặc</span>
+							<span class="b">var</span> <span class="bl">name_array = [1,2,3];</span>
+							</pre>
+
+							<h4><strong>Kiểu dữ liệu Objects</strong></h4>
+							<p>Như chúng ta đã biết, Javascript không phải là một ngôn ngữ hướng đối tượng, nhưng nhờ vào kiểu dữ liệu Object thì chúng ta hoàn toàn có thể lập trình hướng đối tượng được.</p>
+							<p>Mỗi Object sẽ có các <strong>thuộc tính</strong> và <strong>phương thức</strong>.</p>
+							<p>Thuộc tính là những đặc điểm (có thể hiểu là biến) cần lưu trữ trong đối tượng. Ví dụ ta tạo đối tượng Sinh viên thì có thể có thuộc tính là Mã số sinh viên, họ tên, năm ra trường,...</p>
+							<p>Cách khai báo: <br><span class="r"><strong>Cách 1:</strong> Sử dụng từ khóa new Object()</span></p>
+							<pre>
+							<span class="n">// Khởi tạo</span>
+							<span class="b">var</span> <span class="bl">Sinhvien = new Object();
+							 
+							<span class="n">// Thêm thuộc tính</span>
+							Sinhvien.tuoi = '';
+							Sinhvien.namratruong = '';
+							Sinhvien.hoten = '';
+							</span>
+
+							</pre>
+							<span class="r"><strong>Cách 2:</strong> Sử dụng từ khóa {} và thêm thuộc tính ngay lúc khai báo</span>
+							<pre>
+							<span class="n">// Khởi tạo</span>
+							<span class="b">var</span> <span class="bl">Sinhvien = {
+							Sinhvien.tuoi = '';
+							Sinhvien.namratruong = '';
+							Sinhvien.hoten = '';
+							}
+							</span>
+							</pre>
+							<span class="r"><strong>Cách 3:</strong> Sử dụng từ khóa {} và thêm thuộc tính sau đó</span>
+							<pre>
+							<span class="n">// Khởi tạo</span>
+							<span class="b">var</span> <span class="bl">Sinhvien = {};
+							Sinhvien.tuoi = '';
+							Sinhvien.namratruong = '';
+							Sinhvien.hoten = '';
+							</span>
+							</pre>
+							<p>Phương thức là những hành động (có thể hiểu là hàm) của đối tượng. Ví dụ đối tượng Sinh viên có thể có phương thức là Lưu bài tập, học bài,...</p>
+							<p>Cách khai báo:</p>
+							<span class="r"><strong>Cách 1:</strong> Sử dụng từ khóa new Object()</span>
+							<pre>
+							<span class="n">// Khởi tạo</span>
+							<span class="b">var</span> <span class="bl">Sinhvien = new Object();
+							Sinhvien.Hoc = function(){
+						    	<span class="n">// do some thing</span>
+							};
+						 
+							Sinhvien.Luu = function(){
+						    	<span class="n">// do some thing</span>
+							};
+							</span>
+							</pre>
+
+							<span class="r"><strong>Cách 2:</strong> Sử dụng từ khóa {} và thêm phương thức ngay lúc khai báo</span>
+							<pre>
+							<span class="n">// Khởi tạo</span>
+							<span class="b">var</span> <span class="bl">Sinhvien = {
+								Hoc : function(){
+							    	<span class="n">// do some thing</span>
+								},			 
+								Luu : function(){
+							    	<span class="n">// do some thing</span>
+								}
+							}
+							</span>
+							</pre>
+
+							<span class="r"><strong>Cách 3:</strong> Sử dụng từ khóa {} và thêm phương thức sau đó</span>
+							<pre>
+							<span class="n">// Khởi tạo</span>
+							<span class="b">var</span> <span class="bl">Sinhvien = {};
+							Sinhvien.Hoc = function(){
+							    <span class="n">// do some thing</span>
+							};		 
+							Sinhvien.Luu = function(){
+							    <span class="n">// do some thing</span>
+							};
+							</span>
+							</pre>
+							<p>Tất cả đều được khuyến khích nên sử dụng cách 2.</p>
+							<p>Nếu bạn muốn biết một biến thuộc kiểu dữ liệu gì thì sử dụng hàm <code>typeof</code>.</p>
+
+
+      						</div>
+							
+    					</div>
+  					</div>
+					
+					<div class="panel panel-info">
+    					<div class="panel-heading">
+      						<h4 class="panel-title">
+        					<a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        					Câu 3: Làm thế nào để truy xuất (lấy giá trị) trong 1 thẻ HTML bất kỳ và gán vào 1 biến để trong
+Javascript theo ID, theo Class, theo Name, theo tên thẻ HTML và theo CSS Selector (ví dụ
+.class, #id)? Cho ví dụ minh họa.</a>
+      						</h4>
+    					</div>
+    					<div id="collapse3" class="panel-collapse collapse">
+      						<div class="panel-body">
+
+							<p>Như đã đề cập khá chi tiết ở <strong><u><i>Task3.1 - câu 3</i></u></strong> chúng ta có thể sử dụng:</p>
+							<ul>
+								<li><code>document.getElementById()</code></li>
+								<li><code>document.getElementsByClassName()</code></li>
+								<li><code>document.getElementsByName()</code></li>
+								<li><code>document.getElementsByTagName()</code></li>
+							</ul>
+							<p>Sau đó sử dụng <strong>innerHTML</strong> để lấy nội dung hoặc <strong>document.CacPhuongThucOTren().attributeName</strong> để lấy giá trị.</p>
+							<h4><strong>Tìm thẻ HTML theo ID</strong></h4>
+							<pre>
+							<span class="n">// Lấy thẻ input</span>
+							<span class="b">var</span> <span class="bl">element = document.getElementById('idAhihi');</span>
+							 
+							<span class="n">// Lấy giá trị của thẻ input xuất ra</span>
+							<span class="b">document.write(element.value);</span>
+							</pre>
+							<h4><strong>Tìm thẻ HTML theo tên của thẻ HTML</strong></h4>
+							<pre>
+							<span class="n">// Lấy thẻ input</span>
+							<span class="b">var</span> <span class="bl">element = document.getElementsByTagName('idAhihi');</span>
+							 
+							<span class="n">// Lấy giá trị của thẻ input xuất ra</span>
+							<span class="b">document.write(element[0].value);</span>
+							</pre>
+							<h4><strong>Tìm thẻ HTML theo tên class</strong></h4>
+							<pre>
+							<span class="n">// Lấy thẻ input</span>
+							<span class="b">var</span> <span class="bl">element = document.getElementsByClassName('idAhihi');</span>
+							 
+							<span class="n">// Lấy giá trị của thẻ input xuất ra</span>
+							<span class="b">document.write(element[0].value);</span>
+							</pre>
+
+							<h4><strong>Tìm thẻ HTML theo cú pháp của Selector CSS</strong></h4>
+							<p>Thông thường, khi chúng ta chọn các thẻ theo class thì chắc chắn sẽ có một số kết quả chúng ta không mong đợi. Chính vì vậy, Javascript DOM có một phương thức kết hợp với CSS Selector để truy vấn có độ chính xác cao hơn.</p>
+							<p>Tương tự như kiểu "chỉ ra đường dẫn" cho phương thức thì phương thức sẽ chọn chính xác các đối tượng mà ta nhắm đến. Ví dụ:</p>
+							<pre>
+							<span class="r">
+							&lt;input <span class="gr">type=</span><span class="bl">"text"</span> <span class="gr">value=</span><span class="bl">"thẻ không cần lấy"</span> <span class="gr">class=</span><span class="bl">"website"</span>/&gt;
+						    &lt;div&gt;
+						        &lt;input <span class="gr">type=</span><span class="bl">"text"</span> <span class="gr">value=</span><span class="bl">"thẻ cần lấy"</span> <span class="gr">class=</span><span class="bl">"website"</span>/&gt;
+						        &lt;input <span class="gr">type=</span><span class="bl">"text"</span> <span class="gr">value=</span><span class="bl">"thẻ không cần lấy"</span>/&gt;
+						    &lt;/div&gt;
+							</span>
+							</pre>
+							<p>Câu hỏi đặt ra là làm thế nào có thể chọn đúng một thẻ input nằm trong thẻ div và có class="website"?</p>
+							<p>Rất đơn giản, chúng ta chỉ ra "đường dẫn" cho phương thức <code>document.querySelectorAll()</code> như sau:</p>
+							<pre>
+							<span class="b">var</span> <span class="bl">element = <span class="b">document.querySelectorAll("div input.website")</span>;</span>
+							</pre>
+							<p>Như thế là đã có thể chọn đúng đối tượng mà chúng ta mong muốn.</p>
+
+
+      						</div>
+    					</div>
+  					</div>
+
+  					<div class="panel panel-info">
+    					<div class="panel-heading">
+      						<h4 class="panel-title">
+        					<a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+        					Câu 4: Xác định các lệnh Javascript tương ứng để thực hiện các yêu cầu:</a>
+      						</h4>
+    					</div>
+    					<div id="collapse4" class="panel-collapse collapse in">
+      						<div class="panel-body">
+      							
+							
+							<h4><strong>Viết ghi chú trong Javascript (1 dòng, nhiều dòng)</strong></h4>
+							<p>Nếu nội dung ghi chú nằm gọn trên một dòng thì bạn chỉ cần đặt cặp dấu <strong>//</strong> phía trước nó.</p>
+							<pre>
+							<span class="r">
+							&lt;script&gt;
+								<span class="b">alert<span class="bl">("ahihi");</span></span>
+								<span class="n">// Đây là phần ghi chú nè!!!</span>
+								<span class="b">alert<span class="bl">("ahihi");</span></span>
+							&lt;/script&gt;
+							</span>
+							</pre>
+							<p>Nếu phần nội dung chú thích trải dài trên nhiều dòng thì ta dùng cặp dấu <strong>/* */</strong> để bao quanh chúng.</p>
+							<pre>
+							<span class="r">
+							&lt;script&gt;
+								<span class="b">alert<span class="bl">("ahihi");</span></span>
+								<span class="n">/* Đây là phần ghi chú nè !!!
+								Thấy ghi chú dài hơm...
+								Dài quá trời dài nè... */</span>
+								<span class="b">alert<span class="bl">("ahihi");</span></span>
+							&lt;/script&gt;
+							</span>
+							</pre>
+							<p>Ngoài ra, cặp dấu <strong>/* */</strong> cũng có thể dùng để chú thích cho phần nội dung nằm gọn trên một dòng.</p>
+
+
+							<h4><strong>Hiển thị thời gian hiện tại (từ năm đến giây theo múi giờ GMT+7 - Việt Nam).</strong></h4>
+							<p>Bấm button để biết thời gian hiện tại. Sử dụng Date Object với cách khai báo new Date() để biết rõ tất cả các thông số từ thứ, ngày, tháng, năm, múi giờ,...</p>
+							<button type="button" onclick="get()">Click</button>
+							<div id="date"></div>
+							<script>
+							function get() {
+								var	date1 = new Date();
+								document.getElementById("date").innerHTML = date1;
+							}	
+							</script>
+
+							<div id="timer"></div>
+
+							<h4><strong>Viết 1 hàm (function) để tính tổng giá trị của 2 số ngẫu nhiên từ 1 đến 100.</strong></h4>
+							<p>Bấm Button để random 2 số ngẫu nhiên từ 1 đến 100.</p>
+							<button type="button" onclick="show1()">Button</button>
+							<div id="display1"></div>
+							<p>Bấm button Kết quả để cộng 2 số đã random.</p>
+							<button type="button" onclick="show2()">Kết quả</button>
+							<div id="display2"></div>
+
+							<h4><strong>Đổi màu nền hay hình nền của trang</strong></h4>
+							<p>Bấm button để đổi màu nền của trang</p>
+							<button type="button" onclick="changeBRC()">Button</button>
+
+      						</div>
+    					</div>
+  					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script language="javascript" src="task32.js"></script>
+</body>
+</html>

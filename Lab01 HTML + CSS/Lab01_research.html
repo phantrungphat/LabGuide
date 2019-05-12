@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task 1.1</title>
+	<link rel="stylesheet" type="text/css" href="style_research.css">
+	<meta charset="utf-8">
+	<meta name="author" content="Phan Trung Phat">
+</head>
+<body>
+	<div id="container">
+		<h4>16520916 - Phan Trung Phát - Task 1</h4>
+		<ul id="inside">
+			<li class="ib">So sánh file HTML có định dạng .html và .htm. Nếu không có các thẻ &#60;html&#62;, &#60;head&#62;
+và &#60;body&#62; thì có ảnh hưởng gì trong file HTML không?</li>
+				<p>Đầu tiên, chúng ta cần phải biết là 2 phần mở rộng này đều dành cho file HTML, chúng đều là các file văn bản thuần và chúng điển hình được sử dụng để tạo nên các trang web, vậy điểm khác biệt giữa chúng ta gì?</p>
+				<p>Thật đáng tiếc nhưng chúng không có sự khác biệt, có chăng là ở số lượng ký tự giữa chúng, một bên là 3 ký tự (.htm) một bên là 4 ký tự (.html). Vậy tại sao có tới 2 cách đặt phần mở rộng khác nhau cho cùng một loại file? Câu trả lời như sau: ngày xửa ngày xưa, trên nhiều hệ điều hành, phần mở rộng của file chỉ được sử dụng 3 kí tự. Điều này đặc biệt đúng với Microsoft Windows, nền tảng hệ điều hành phổ biến nhất (lúc đó và cũng như bây giờ). Thế nên, rất nhiều những trang web được tạo từ những ngày xưa cũ ấy sẽ có phẩn mở rộng là .htm, chỉ 3 kí tự mà thôi.</p>
+				<p>.html và .htm đều có thể mang server-side code. Do đó, người ta có thể chèn code PHP và chạy nó bình thường. </p>
+			<li class="ib">
+				Có những cách nào để hiển thị các thẻ HTML để hiển thị ra bên ngoài mà không bị HTML
+xử lý. Ví dụ hiển thị các nội dung như &#60;/br&#62; &#60;div&#62;&#60;h1&#62;Hello HTML&#60;/h1&#62;&#60;/div&#62;</li>
+				<p>Để xử lý những điều đó, chúng ta sử dụng "Danh sách các mã HTML đặt biệt"</p>
+				<p>Dấu < sẽ ký tự đặt biệt sẽ là <span>&</span>#60; trong HTML</p>
+				<p>Dấu > sẽ ký tự đặt biệt sẽ là <span>&</span>#62; trong HTML</p>
+				<p>Ngoài ra ta còn có thể sử dụng cặp <span>&</span>lt;<span>&</span>gt; để thay thế cho cặp <span><</span>></p>
+			<li class="ib">
+				Làm thế nào để tạo vùng chọn để định dạng trong CSS cho một tag, một class, một ID?</li>
+				<p>Đối với tag ta có thể chỉ ra đường dẫn đến tag đó để làm selector định dạng CSS</p>
+				<p>Ví dụ: ta muốn định dạng ký tự màu đỏ trong &#60;p&#62; và &#60;p&#62; trong &#60;div&#62;</p>
+				<pre>&#60;div&#62;
+	&#60;p&#62;Nội dung&#60;/p&#62;
+&#60;/div&#62;</pre>
+				<pre>Ta viết CSS: div p {
+			color:red;
+		}</pre>
+				<p>Ngoài ra, để tạo Selector một cách chuẩn xác thì ta có thể tham khảo thêm Combinators</p>
+				<p>Còn đối với Class và ID thì ta chỉ cần sử dụng chỉ rõ class nào và id nào để tạo Selector (.tenclass hoặc #tenid). Hoặc nếu không thì ta cũng có thể chỉ ra đường dẫn của class và id như cách ở trên.</p>
+			<li class="ib">
+				Tìm và cho ví dụ về các thẻ có các chức năng sau:</li>
+				<ul>
+					<li class="ib">Gạch chân, kẻ đường ngang, chỉ số trên/dưới.</li>
+						<p>Sử dụng cặp thẻ &#60;u&#62;&#60;/u&#62; để gạch chân</p>
+						<p>Ví dụ: &#60;p&#62;&#60;u&#62;Nội dung&#60;/u&#62;&#60;/p&#62;</p>
+						<p>Kết quả: <u>Nội dung</u></p>
+						<p>Sử dụng thẻ &#60;del&#62;&#60;/del&#62; để kẻ đường ngang</p>
+						<p>Ví dụ: &#60;p&#62;&#60;del&#62;Nội dung&#60;/del&#62;&#60;/p&#62;</p>
+						<p>Kết quả: <del>Nội dung</del></p>
+						<p>Sử dụng thẻ &#60;sub&#62;&#60;/sub&#62; chỉ số dưới</p>
+						<p>Ví dụ: &#60;p&#62;&#60;sub&#62;Nội dung&#60;/sub&#62;&#60;/p&#62;</p>
+						<p>Kết quả: <sub>Nội dung</sub></p>
+						<p>Sử dụng thẻ &#60;sup&#62;&#60;/sub&#62; chỉ số trên</p>
+						<p>Ví dụ: &#60;p&#62;&#60;sup&#62;Nội dung&#60;/sup&#62;&#60;/p&#62;</p>
+						<p>Kết quả: <sup>Nội dung</sup></p>
+					
+					<li class="ib">
+						Tạo bảng (có ghép dòng, ghép cột).</li>
+						<p>*Sử dụng các thẻ &#60;table&#62; &#60;tr&#62; &#60;td&#62; để tạo bảng</p>
+						<pre>Ví dụ:
+						&#60;table border="1" cellspacing="0" cellpadding="5"&#62;
+    						&#60;tr&#62;
+        						&#60;td&#62;Hàng 1 cột 1&#60;/td&#62;
+       						 	&#60;td&#62;Hàng 1 cột 2&#60;/td&#62;
+        						&#60;td&#62;Hàng 1 cột 3&#60;/td&#62;
+    						&#60;/tr&#62;
+    						&#60;tr&#62;
+        						&#60;td&#62;Hàng 2 cột 1&#60;/td&#62;
+        						&#60;td&#62;Hàng 2 cột 2&#60;/td&#62;
+        						&#60;td&#62;Hàng 2 cột 3&#60;/td&#62;
+    						&#60;/tr&#62;
+						&#60;/table&#62; </pre>
+						<p>Kết quả: <table border="1" cellspacing="0" cellpadding="5">
+    <tr>
+        <td>Hàng 1 cột 1</td>
+        <td>Hàng 1 cột 2</td>
+        <td>Hàng 1 cột 3</td>
+    </tr>
+    <tr>
+        <td>Hàng 2 cột 1</td>
+        <td>Hàng 2 cột 2</td>
+        <td>Hàng 2 cột 3</td>
+    </tr>
+</table></p>			<p>Trong đó: <span><br>Thuộc tính border="1" là khai báo đường viền của table</span>
+						<span><br>Thuộc tính cellspacing="0" là khai báo khoảng cách giữa viền trên và viền dưới của đường viền</span>
+						<span><br>Thuộc tính cellpadding="5" là khai báo khoảng cách giữa nội dung trong ô so với đường viền</span></p>
+						<p>*Để nối hai hoặc nhiều ô với nhau tính từ ô đặt thẻ này đi tới phía trước ta sử dụng thuộc tính <b>colspan</b></p>
+						<pre>Ví dụ:
+						&#60;table border="1" cellspacing="0" cellpadding="5"&#62;
+    						&#60;tr&#62;
+        						&#60;td colspan="2"&#62;Hàng 1 cột 1 và Hàng 1 cột 2&#60;/td&#62;
+        						&#60;td&#62;Hàng 1 cột 3&#60;/td&#62;
+    						&#60;/tr&#62;
+    						&#60;tr&#62;
+        						&#60;td&#62;Hàng 2 cột 1&#60;/td&#62;
+        						&#60;td&#62;Hàng 2 cột 2&#60;/td&#62;
+        						&#60;td&#62;Hàng 2 cột 3&#60;/td&#62;
+    						&#60;/tr&#62;
+						&#60;/table&#62; </pre>
+						<p>Kết quả: <table border="1" cellspacing="0" cellpadding="5">
+    <tr>
+        <td colspan="2">Hàng 1 cột 1 và Hàng 1 cột 2</td>
+        <td>Hàng 1 cột 3</td>
+    </tr>
+    <tr>
+        <td>Hàng 2 cột 1</td>
+        <td>Hàng 2 cột 2</td>
+        <td>Hàng 2 cột 3</td>
+    </tr>
+</table></p>					
+						<p>*Để nối hai hoặc nhiêu ô với nhau tính từ ô đặt thẻ đi xuống phía dưới ta sử dụng thuộc tính <b>rowspan</b></p>
+						<pre>Ví dụ:
+						&#60;table border="1" cellspacing="0" cellpadding="5"&#62;
+    						&#60;tr&#62;
+        						&#60;td rowspan="2"&#62;Hàng 1 cột 1&#60;/td&#62;
+        						&#60;td&#62;Hàng 1 cột 2&#60;/td&#62;
+        						&#60;td&#62;Hàng 1 cột 3&#60;/td&#62;
+    						&#60;/tr&#62;
+    						&#60;tr&#62;
+        						&#60;td&#62;Hàng 2 cột 2&#60;/td&#62;
+        						&#60;td&#62;Hàng 2 cột 3&#60;/td&#62;
+    						&#60;/tr&#62;
+						&#60;/table&#62; </pre>
+						<p>Kết quả: <table border="1" cellspacing="0" cellpadding="5">
+    <tr>
+        <td rowspan="2">Hàng 1 cột 1</td>
+        <td>Hàng 1 cột 2</td>
+        <td>Hàng 1 cột 3</td>
+    </tr>
+    <tr>
+        <td>Hàng 2 cột 2</td>
+        <td>Hàng 2 cột 3</td>
+    </tr>
+</table></p>
+					
+					<li class="ib">
+						 4 hiệu ứng chữ chạy từ 4 hướng (trái, phải, trên, dưới).</li>
+						 <p>Sử dụng cặp thẻ &#60;marquee&#62;&#60;/marquee&#62; với thuộc tính direction 4 hướng (up, down, left, right)</p>
+						 <p>Ví dụ: <br><span><marquee direction="up">Lên</marquee></span><br><span><marquee direction="down">Xuống</marquee></span><br><span><marquee direction="left">Trái</marquee></span><br><span><marquee direction="right">Phải</marquee></span></p>
+					
+				</ul>
+			
+		</ul>
+	</div>
+</body>
+</html>

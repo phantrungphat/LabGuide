@@ -1,0 +1,28 @@
+
+#container {
+	font-family: Tahoma;
+	background-image: url(image/logo_mmt-nth.png);
+	width: 100%;
+	height: 3000px;
+	background-repeat: repeat;
+	color: #000;
+}
+img {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+h4 {
+	text-align: center;
+	color: #bf1515;
+}
+ul#inside {
+	list-style-position: inside;
+	list-style-type: lower-alpha;
+}
+ul li p{
+	font-size: 14px;
+}
+.ib {
+	font-style: italic;
+	font-weight: bold;
+}

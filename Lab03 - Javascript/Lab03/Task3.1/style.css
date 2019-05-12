@@ -1,0 +1,22 @@
+.r {
+	color: #d44950;
+}
+.b {
+	color: #2f6f9f;
+}
+.gr {
+	color: green;
+}
+.n {
+	color: #999;
+}
+.bl {
+	color: black;
+}
+.remove-padding-margin {
+	padding: 0;
+	margin: 0;
+}
+body {
+	padding-top: 52px;
+}

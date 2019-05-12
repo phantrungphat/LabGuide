@@ -1,0 +1,183 @@
+#container {
+	font-family: Helvetica;
+	color: black;
+	font-size: 18px;
+	background-color: white;
+	width: 700px;
+	height: 1000px;	
+	margin: auto;
+}
+/*Block lớn bên trái*/
+
+.blockleft {
+	float: left;
+	width: 220px;
+	height: 1000px;
+	background-color: red;
+	position: relative;
+}
+/*Chia 2 phần trên là avatar phần dưới là summary*/
+/*Phần avatar*/
+#avatar {
+	background-color: #28699A;
+	width: 220px;
+	height: 220px;
+	color: white;
+	position: absolute;
+	top: 0px;
+}
+#container .blockleft #avatar div {
+	position: relative;
+}
+#image {
+	margin: auto;
+	margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    /*background-color: #999;*/
+    
+    border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+}
+#avataradd {
+	position: absolute;
+	margin-left: 35px;
+	margin-top: -150px;
+	z-index: 1;
+}
+#name {
+	margin-top: 10px;
+	text-align: center;
+}
+/*Phần summary*/
+#summary {
+	position: relative;
+	width: 196px;
+	height: 780px;
+	margin-top: 220px;
+	font-size: 12px;
+	color: white;
+	padding-left: 12px;
+	padding-right: 12px;
+	background-color: #3280BD;
+}
+#information {
+	position: absolute;	
+}
+#p1 {
+	line-height: 1.7;
+}
+#aboutme {
+	position: absolute;
+	top: 100px;
+	width: 196px;
+	height: 170px;
+}
+#skills {
+	position: absolute;
+	top: 260px;
+	width: 196px;
+	height: 250px;
+	line-height: 0.9;
+}
+.progressbar {
+      background-color: white;
+      margin-top: 4px;
+}    
+.progressbar #processing1 {
+       background-color: #28699A;
+       width: 65%; 
+       height: 7px;
+}
+.progressbar #processing2 {
+       background-color: #28699A;
+       width: 60%; 
+       height: 7px;
+}
+.progressbar #processing3 {
+       background-color: #28699A;
+       width: 50%; 
+       height: 7px;
+}
+.progressbar #processing4 {
+       background-color: #28699A;
+       width: 70%; 
+       height: 7px;
+}
+.progressbar #processing5 {
+       background-color: #28699A;
+       width: 55%; 
+       height: 7px;
+}
+.progressbar #processing6 {
+       background-color: #28699A;
+       width: 40%; 
+       height: 7px;
+}
+#workingskills {
+	position: absolute;
+	top: 515px;
+	width: 196px;
+}
+#circle {
+	list-style-type: circle;
+	width: 196px;
+	height: 200px;
+	margin-left: -23px;
+	line-height: 2.3;
+}
+/*Block lớn bên phải*/
+
+.blockright {
+	float: right;
+	width: 480px;
+	height: 1000px;	
+	color: black;
+	background-color: #f2eaea;
+	position: relative;
+	font-size: 12px;
+}
+/*Chia làm 3 phần*/
+/*Phần 1 Education*/
+#education {
+	position: absolute;
+	width: 454px;
+	height: 205px;
+	padding-left: 14px;
+	padding-right: 12px;
+	top: 25px;
+}
+.contentright {
+	display: inline-block;
+	text-align: right;
+	width: 150px;
+}
+#workexperience {
+	position: absolute;
+	width: 454px;
+	height: 470px;
+	padding-left: 14px;
+	padding-right: 12px;
+	top: 240px;
+}
+.contentleft {
+	display: inline-block;
+	width: 300px;
+}
+#achievement {
+	position: absolute;
+	top: 730px;
+	width: 454px;
+	height: 270px;
+	padding-left: 14px;
+	padding-right: 12px;
+}
+.word {
+	position: relative;
+	top: -8px;
+}
+.word1 {
+	position: relative;
+	top: -5px;
+}
